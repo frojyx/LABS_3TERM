@@ -3,11 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\shmyg\\source\\repos\\LABS_3TERM\\lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|C:\\Users\\shmyg\\source\\repos\\LABS_3TERM\\lab1\\src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|solutionrelative:src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|C:\\Users\\shmyg\\source\\repos\\LABS_3TERM\\lab1\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|C:\\Users\\shmyg\\source\\repos\\1lab\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|C:\\Users\\shmyg\\source\\repos\\LABS_3TERM\\lab1\\src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|solutionrelative:src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0FD83D7-C8F2-4F41-9B16-700E2B299EB0}|lab1.vcxproj|C:\\Users\\shmyg\\source\\repos\\1lab\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
@@ -44,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,6 +57,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\shmyg\\source\\repos\\LABS_3TERM\\lab1\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\shmyg\\source\\repos\\LABS_3TERM\\lab1\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-18T18:24:10.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\shmyg\\source\\repos\\1lab\\README.md",
@@ -64,25 +78,11 @@
               "RelativeToolTip": "..\\..\\1lab\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-09-18T18:17:43.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:17:43.003Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\shmyg\\source\\repos\\1lab\\.gitignore",
-              "RelativeDocumentMoniker": "..\\..\\1lab\\.gitignore",
-              "ToolTip": "C:\\Users\\shmyg\\source\\repos\\1lab\\.gitignore",
-              "RelativeToolTip": "..\\..\\1lab\\.gitignore",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-18T18:17:41.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "utils.cpp",
               "DocumentMoniker": "C:\\Users\\shmyg\\source\\repos\\LABS_3TERM\\lab1\\src\\utils.cpp",
               "RelativeDocumentMoniker": "src\\utils.cpp",
@@ -103,8 +103,7 @@
               "RelativeToolTip": "src\\mystr.cpp",
               "ViewState": "AgIAAAcAAAAAAAAAAAAcwBIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-18T18:13:51.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:13:51.371Z"
             },
             {
               "$type": "Document",
@@ -116,8 +115,7 @@
               "RelativeToolTip": "src\\menu.cpp",
               "ViewState": "AgIAACMAAAAAAAAAAAAcwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-18T18:13:50.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:13:50.435Z"
             },
             {
               "$type": "Document",
@@ -129,8 +127,7 @@
               "RelativeToolTip": "src\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-18T18:13:49.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:13:49.321Z"
             },
             {
               "$type": "Document",
@@ -142,8 +139,7 @@
               "RelativeToolTip": "includes\\utils.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-18T18:13:43.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:13:43.021Z"
             },
             {
               "$type": "Document",
@@ -155,8 +151,7 @@
               "RelativeToolTip": "includes\\mystr.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-18T18:13:41.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:13:41.777Z"
             },
             {
               "$type": "Document",
@@ -168,8 +163,7 @@
               "RelativeToolTip": "includes\\menu.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-18T18:13:40.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:13:40.861Z"
             }
           ]
         }
