@@ -10,4 +10,4 @@
 ## SonarCloud
 
 Результаты SonarCloud:  
-[SonarCloud](https://sonarcloud.io/project/overview?id=frojyx_lab2.3term)
+[SonarCloud](https://sonarcloud.io/project/overview?id=frojyx_LABS_3TERM2)
