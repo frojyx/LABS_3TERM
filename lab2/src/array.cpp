@@ -61,23 +61,14 @@ Array& Array:: operator++([[maybe_unused]] int value)
 void inputArray(Array& arr)
 {
 	std::cout << "Задайте размер массива: " <<std:: endl;
-	while (true)
-	{
-		while (true) {
-			arr.size = validInt();
-			if (arr.size<1 || arr.size>kMaxInt) {
-				std::cout << "Введите число больше 0:" << std::endl;
-				continue;
-			}
-			break;
+	
+	while (true) {
+		arr.size = validInt();
+		if (arr.size<1 || arr.size>kMaxInt) {
+			std::cout << "Введите число больше 0:" << std::endl;
+			continue;
 		}
-		
-		if (arr.size < 1) {
-			std::cout << "Задайте размер больше единицы.Введите ещё раз:" << std::endl;
-		}
-		else {
-			break;
-		}
+		break;
 	}
 
 	std::cout << "Заполните массив." << std::endl;
