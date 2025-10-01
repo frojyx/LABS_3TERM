@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 
 class passengerCarrier {
 private:
@@ -18,6 +17,6 @@ public:
 	passengerCarrier& operator=(const passengerCarrier& other);
 	passengerCarrier(const passengerCarrier& other);
 
-	double calculateTime();
-	double calculateCost();
+	double calculateTime() const;
+	double calculateCost() const;
 };

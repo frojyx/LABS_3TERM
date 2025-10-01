@@ -1,7 +1,7 @@
 #include <iostream>
-#include "..//includes/passengerCarrier.h"
-#include "..//includes/menu.h"
-#include "..//includes/utils.h"
+#include "../includes/passengerCarrier.h"
+#include "../includes/menu.h"
+#include "../includes/utils.h"
 
 int validInt(int min , int max ) {
     int number;
