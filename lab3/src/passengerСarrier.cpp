@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "../includes/passengerCarrier.h"
 
 passengerCarrier::passengerCarrier(double speed, double cost, double distance) : distance(distance), costPerKm(cost), speedKmH(speed) {}
@@ -13,7 +14,7 @@ passengerCarrier::~passengerCarrier()
 }	
 passengerCarrier& passengerCarrier:: operator=(const passengerCarrier& other) = default;
 
-passengerCarrier::passengerCarrier(const passengerCarrier& other) = default;\
+passengerCarrier::passengerCarrier(const passengerCarrier& other) = default;
 
 double passengerCarrier:: calculateTime() const{ return distance / speedKmH; }
 
