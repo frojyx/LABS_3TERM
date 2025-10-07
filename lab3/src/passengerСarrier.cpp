@@ -1,23 +1,23 @@
 #include <iostream>
 
-#include "../includes/passengerCarrier.h"
+#include "../includes/PassengerCarrier.h"
 
-passengerCarrier::passengerCarrier(double speed, double cost, double distance) : distance(distance), costPerKm(cost), speedKmH(speed) {}
+PassengerCarrier::PassengerCarrier(double speed, double cost, double distance) : distance(distance), costPerKm(cost), speedKmH(speed) {}
 
-passengerCarrier::passengerCarrier() : distance(0.0), costPerKm(0.0), speedKmH(0.0) {}
+PassengerCarrier::PassengerCarrier() : distance(0.0), costPerKm(0.0), speedKmH(0.0) {}
 
-passengerCarrier::~passengerCarrier()
+PassengerCarrier::~PassengerCarrier()
 {
 	distance = 0;
 	costPerKm = 0;
 	speedKmH = 0;
 }	
-passengerCarrier& passengerCarrier:: operator=(const passengerCarrier& other) = default;
+PassengerCarrier& PassengerCarrier:: operator=(const PassengerCarrier& other) = default;
 
-passengerCarrier::passengerCarrier(const passengerCarrier& other) = default;
+PassengerCarrier::PassengerCarrier(const PassengerCarrier& other) = default;
 
-double passengerCarrier:: calculateTime() const{ return distance / speedKmH; }
+double PassengerCarrier:: calculateTime() const{ return distance / speedKmH; }
 
-double passengerCarrier:: calculateCost() const{ return distance * costPerKm; }
+double PassengerCarrier:: calculateCost() const{ return distance * costPerKm; }
 	
-void passengerCarrier :: getName(){ std::cout << "Транспорт" << std::endl; }
+void PassengerCarrier :: getName(){ std::cout << "Транспорт" << std::endl; }

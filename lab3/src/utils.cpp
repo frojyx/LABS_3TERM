@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../includes/passengerCarrier.h"
+#include "../includes/PassengerCarrier.h"
 #include "../includes/menu.h"
 #include "../includes/utils.h"
 
@@ -29,7 +29,7 @@ int validInt(int min , int max ) {
     }
 }
 
-void addCarrier(passengerCarrier**& carriers, int* size, int* cap)
+void addCarrier(PassengerCarrier**& carriers, int* size, int* cap)
 {
     expandCarries(size, cap, carriers);
 
@@ -38,7 +38,7 @@ void addCarrier(passengerCarrier**& carriers, int* size, int* cap)
     std::cout << "Вы успешно добавили транспорт." << std::endl;
 }
 
-void expandCarries(int* size, int* cap, passengerCarrier**& carriers)
+void expandCarries(int* size, int* cap, PassengerCarrier**& carriers)
 {
     if (*size < 0)
     {
@@ -47,7 +47,7 @@ void expandCarries(int* size, int* cap, passengerCarrier**& carriers)
     if (*size == *cap - 1)
     {
         *cap *= 2;
-        auto** newCarriers = new passengerCarrier * [*cap];
+        auto** newCarriers = new PassengerCarrier * [*cap];
         for (int i = 0; i < *size; i++)
         {
             newCarriers[i] = carriers[i];
@@ -58,7 +58,7 @@ void expandCarries(int* size, int* cap, passengerCarrier**& carriers)
     (*size)++;
 }
 
-void showInfo(int size, passengerCarrier** carriers)
+void showInfo(int size, PassengerCarrier** carriers)
 {
     if (carriers == nullptr)
     {
@@ -73,7 +73,7 @@ void showInfo(int size, passengerCarrier** carriers)
     std::cout << std::endl;
 }
 
-void printInfo(passengerCarrier& carrier)
+void printInfo(PassengerCarrier& carrier)
 {
     std::cout << std::endl;
     carrier.getName();

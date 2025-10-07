@@ -1,7 +1,7 @@
 #pragma once
-#include "../includes/passengerCarrier.h"
+#include "../includes/PassengerCarrier.h"
 
 void showMenu();
 void menu();
 void showMenuCarrier();
-void chooseCarriers(int size, passengerCarrier**& carriers);
+void chooseCarriers(int size, PassengerCarrier**& carriers);

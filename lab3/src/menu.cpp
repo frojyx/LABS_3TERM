@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../includes/passengerCarrier.h"
+#include "../includes/PassengerCarrier.h"
 #include "../includes/utils.h"
 #include "../includes/car.h"
 #include "../includes/airplane.h"
@@ -29,7 +29,7 @@ void showMenuCarrier()
 
 void menu()
 {
-	passengerCarrier** carriers = nullptr;
+	PassengerCarrier** carriers = nullptr;
 	int size = 0;
 	int cap = 1;
 
@@ -57,7 +57,7 @@ void menu()
 	}
 }
 
-void chooseCarriers(int size, passengerCarrier**& carriers)
+void chooseCarriers(int size, PassengerCarrier**& carriers)
 {
 	int opt;
 	showMenuCarrier();

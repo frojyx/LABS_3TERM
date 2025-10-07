@@ -1,9 +1,9 @@
 #pragma once
 
 #include <iostream>
-#include "../includes/passengerCarrier.h"
+#include "../includes/PassengerCarrier.h"
 
-class Car :public passengerCarrier {
+class Car :public PassengerCarrier {
 public:
 	void getName() override;
 

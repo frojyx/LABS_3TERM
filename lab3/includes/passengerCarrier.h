@@ -2,20 +2,20 @@
 
 #include <iostream>
 
-class passengerCarrier {
+class PassengerCarrier { 
 private:
 	double distance;
 	double costPerKm;
 	double speedKmH;
 protected:
-	passengerCarrier(double speed, double cost, double distance);
-	passengerCarrier();
+	PassengerCarrier(double speed, double cost, double distance);
+	PassengerCarrier();
 public:
-	virtual ~passengerCarrier();
+	virtual ~PassengerCarrier();
 	virtual void getName();
 
-	passengerCarrier& operator=(const passengerCarrier& other);
-	passengerCarrier(const passengerCarrier& other);
+	PassengerCarrier& operator=(const PassengerCarrier& other);
+	PassengerCarrier(const PassengerCarrier& other);
 
 	double calculateTime() const;
 	double calculateCost() const;
