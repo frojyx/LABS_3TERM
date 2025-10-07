@@ -14,6 +14,7 @@ public:
 	virtual ~PassengerCarrier();
 	virtual void getName();
 
+
 	PassengerCarrier& operator=(const PassengerCarrier& other);
 	PassengerCarrier(const PassengerCarrier& other);
 
