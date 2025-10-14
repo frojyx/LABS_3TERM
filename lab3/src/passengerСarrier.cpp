@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../includes/PassengerCarrier.h"
+#include "../includes/passengerCarrier.h"
 
 PassengerCarrier::PassengerCarrier(double speed, double cost, double distance) : distance(distance), costPerKm(cost), speedKmH(speed) {}
 

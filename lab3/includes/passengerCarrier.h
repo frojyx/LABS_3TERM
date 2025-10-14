@@ -12,8 +12,7 @@ protected:
 	PassengerCarrier();
 public:
 	virtual ~PassengerCarrier();
-	virtual void getName();
-
+	virtual void getName()=0;
 
 	PassengerCarrier& operator=(const PassengerCarrier& other);
 	PassengerCarrier(const PassengerCarrier& other);
