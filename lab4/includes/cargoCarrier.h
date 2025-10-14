@@ -20,5 +20,5 @@ public:
 
 	double calculateTime() const;
 	double calculateCost() const;
-	std::string getCity();
+	std::string getCity() const;
 };

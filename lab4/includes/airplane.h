@@ -6,6 +6,5 @@
 class Airplane :public CargoCarrier {
 public:
 	void getName() override;
-
-	Airplane(double distance);
+	explicit Airplane(double distance);
 };

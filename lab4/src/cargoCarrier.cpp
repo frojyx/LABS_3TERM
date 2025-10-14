@@ -23,5 +23,5 @@ double CargoCarrier::calculateCost() const { return distance * costPerKm; }
 
 void CargoCarrier::getName() { std::cout << "Транспорт" << std::endl; }
 
-std::string CargoCarrier::getCity() { return city; }
+std::string CargoCarrier::getCity() const{ return city; }
 

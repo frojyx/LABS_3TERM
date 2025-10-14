@@ -6,7 +6,5 @@
 class Car :public CargoCarrier {
 public:
 	void getName() override;
-	std::string getCity();
-	Car();
-	Car(double distance);
+	explicit Car(double distance);
 };

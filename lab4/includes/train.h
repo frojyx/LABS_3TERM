@@ -6,6 +6,5 @@
 class Train :public CargoCarrier {
 public:
 	void getName() override;
-
-	Train(double distance);
+	explicit Train(double distance);
 };
