@@ -11,3 +11,4 @@
 
 Результаты SonarCloud:  
 [SonarCloud](https://sonarcloud.io/project/overview?id=frojyx_LABS_3TERM2)
+
