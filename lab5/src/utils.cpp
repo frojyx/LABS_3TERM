@@ -12,7 +12,8 @@ template <typename T>
 void swapElementsInArray(const char* name)
 {
 	int size;
-	int i1, i2;
+	int i1;
+	int i2;
 	std::cout << "Work with " << name << " type." << std::endl;
 	while (true)
 	{
