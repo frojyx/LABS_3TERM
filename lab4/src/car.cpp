@@ -7,7 +7,7 @@ Car::Car(double distance) : CargoCarrier(60, 0.6, distance, inputCityName()) {}
 
 void Car::getName()
 {
-	std::cout << "Машина" << std::endl;
+	std::cout << "Car" << std::endl;
 }
 
 

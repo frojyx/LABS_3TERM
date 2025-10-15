@@ -11,19 +11,19 @@ int validInt(int min, int max) {
         if (!(std::cin >> number)) {
             std::cin.clear();
             while (std::cin.get() != '\n');
-            std::cout << "Введите целое число: ";
+            std::cout << "Enter an integer: ";
             continue;
         }
 
         if (std::cin.get() != '\n') {
             std::cin.clear();
             while (std::cin.get() != '\n');
-            std::cout << "Введите число без других символов : ";
+            std::cout << "Please enter the number without any other characters. : ";
             continue;
         }
 
         if (number<min || number>max) {
-            std::cout << "Введите число больше минимального:" << std::endl;
+            std::cout << "Please enter a number greater than the minimum:" << std::endl;
             continue;
         }
         return number;
@@ -36,7 +36,7 @@ void addCarrier(CargoCarrier**& carriers, int* size, int* cap)
 
     chooseCarriers(*size, carriers);
 
-    std::cout << "Вы успешно добавили транспорт." << std::endl;
+    std::cout << "You have successfully added transport." << std::endl;
 }
 
 void expandCarries(int* size, int* cap, CargoCarrier**& carriers)
@@ -78,40 +78,39 @@ void printInfo(CargoCarrier& carrier)
 {
     std::cout << std::endl;
     carrier.getName();
-    std::cout << "Информация для города " << carrier.getCity() << std::endl;
-    std::cout << "Время на дистанции : " << carrier.calculateTime() << std::endl;
-    std::cout << "Цена на дистанции : " << carrier.calculateCost() << std::endl;
+    std::cout << "Information for the " << carrier.getCity() << std::endl;
+    std::cout << "Time on the distance: " << carrier.calculateTime() << std::endl;
+    std::cout << "Price per distance: " << carrier.calculateCost() << std::endl;
 }
 
 std::string inputCityName()
 {
     std::string cityName;
-    std::cout << "Введите город : " << std::endl;
-   // verifyString(cityName);
-    getline(std::cin, cityName);
+    std::cout << "Enter city:" << std::endl;
+    verifyString(cityName);
     return cityName;
 }
 
-//void verifyString(std::string &str)
-//{
-//    bool valid = false;
-//
-//    while (!valid) {
-//        std::cout << "Введите строку (только буквы и дефис): ";
-//        std::getline(std::cin, str);
-//
-//        valid = true;
-//        for (char c : str) {
-//            if (!std::isalpha(c) && c != '-') {
-//                std::cout << "Ошибка: символ '" << c << "' недопустим!" << std::endl;
-//                valid = false;
-//                break;
-//            }
-//        }
-//
-//        if (str.empty()) {
-//            std::cout << "Ошибка: строка не может быть пустой!" << std::endl;
-//            valid = false;
-//        }
-//    }
-//}
+void verifyString(std::string &str)
+{
+    bool valid = false;
+
+    while (!valid) {
+        std::cout << "Enter city name : ";
+        std::getline(std::cin, str);
+
+        valid = true;
+        for (char c : str) {
+            if (!std::isalpha(c) && c != '-') {
+                std::cout << "Error: symbol'" << c << "' impermissible!" << std::endl;
+                valid = false;
+                break;
+            }
+        }
+
+        if (str.empty()) {
+            std::cout << "Error: string cannot be empty!" << std::endl;
+            valid = false;
+        }
+    }
+}

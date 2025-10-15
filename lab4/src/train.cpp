@@ -7,7 +7,7 @@ Train::Train(double distance) : CargoCarrier(80, 0.3, distance, inputCityName())
 
 void Train::getName()
 {
-	std::cout << "Поезд" << std::endl;
+	std::cout << "Train" << std::endl;
 }
 
 

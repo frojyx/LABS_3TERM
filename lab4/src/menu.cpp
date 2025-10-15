@@ -9,22 +9,22 @@ void showMenu()
 {
 	std::cout << "\n+======================================================================+" << std::endl;
 	std::cout << "Меню" << std::endl;
-	std::cout << "1.Добавить вид грузоперевозчика." << std::endl;
-	std::cout << "2.Вывод информации(цена и время на дистанции для определенного города)." << std::endl;
-	std::cout << "3.Конец работы программы." << std::endl;
+	std::cout << "1.Add a carrier type." << std::endl;
+	std::cout << "2.Information display (price and travel time for a specific city)." << std::endl;
+	std::cout << "3.End of the program." << std::endl;
 	std::cout << "+======================================================================+" << std::endl;
-	std::cout << "Выберете дейстие: ";
+	std::cout << "Select an action: ";
 }
 
 void showMenuCarrier()
 {
 	std::cout << "\n+========================+" << std::endl;
-	std::cout << "Меню выбора транспорта" << std::endl;
-	std::cout << "1.Добавить машину." << std::endl;
-	std::cout << "2.Добавить самолёт." << std::endl;
-	std::cout << "3.Добавить поезд." << std::endl;
+	std::cout << "Carrier selection menu" << std::endl;
+	std::cout << "1.Car." << std::endl;
+	std::cout << "2.Airplane." << std::endl;
+	std::cout << "3.Train." << std::endl;
 	std::cout << "+========================+" << std::endl;
-	std::cout << "Выберете дейстие: ";
+	std::cout << "Select an action: ";
 }
 
 void menu()
@@ -42,17 +42,17 @@ void menu()
 		switch (opt) {
 		case 1:
 			addCarrier(carriers, &size, &cap);
-			std::cout << "Выберите пункт меню:" << std::endl;
+			std::cout << "Select an action:" << std::endl;
 			break;
 		case 2:
 			showInfo(size, carriers);
-			std::cout << "Выберите пункт меню:" << std::endl;
+			std::cout << "Select an action:" << std::endl;
 			break;
 		case 3:
-			std::cout << "Программа завершена." << std::endl;
+			std::cout << "Program completed." << std::endl;
 			return;
 		default:
-			std::cout << "Выберите пункт из меню!" << std::endl;
+			std::cout << "Select an action:" << std::endl;
 		}
 	}
 }
@@ -67,22 +67,22 @@ void chooseCarriers(int size, CargoCarrier**& carriers)
 		opt = validInt(1, 3);
 		switch (opt) {
 		case 1:
-			std::cout << "Введите дистанцию:" << std::endl;
+			std::cout << "Enter distance:" << std::endl;
 			temp = validInt(1, kMaxInt);
 			carriers[size - 1] = new Car(temp);
 			return;
 		case 2:
-			std::cout << "Введите дистанцию:" << std::endl;
+			std::cout << "Enter distance:" << std::endl;
 			temp = validInt(1, kMaxInt);
 			carriers[size - 1] = new Airplane(temp);
 			return;
 		case 3:
-			std::cout << "Введите дистанцию:" << std::endl;
+			std::cout << "Enter distance:" << std::endl;
 			temp = validInt(1, kMaxInt);
 			carriers[size - 1] = new Train(temp);
 			return;
 		default:
-			std::cout << "Выберите пункт из меню!" << std::endl;
+			std::cout << "Select an item from the menu!" << std::endl;
 		}
 	}
 }

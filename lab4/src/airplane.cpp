@@ -7,6 +7,6 @@ Airplane::Airplane(double distance) : CargoCarrier(800, 1, distance,inputCityNam
 
 void Airplane::getName()
 {
-	std::cout << "Самолёт" << std::endl;
+	std::cout << "Airplane" << std::endl;
 }
 
