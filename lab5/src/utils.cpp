@@ -1,15 +1,15 @@
 #include "../includes/utils.h"
 
 template <typename T>
-void swap(int firstInd, int secondInd, T*arr)
+void swap(int firstInd, int secondInd, T* arr)
 {
-	T temp=arr[firstInd];
+	T temp = arr[firstInd];
 	arr[firstInd] = arr[secondInd];
 	arr[secondInd] = temp;
 }
 
-template <typename T>	
-void swapElementsInArray(const char* name)
+template <typename T>
+void runProgram(const char* name)
 {
 	int size;
 	int i1;
@@ -26,6 +26,16 @@ void swapElementsInArray(const char* name)
 	inputArray(arr, size);
 	outputArray(arr, size);
 
+	inputIndexes(i1, i2, size);
+	swap(i1, i2, arr);
+
+	outputArray(arr, size);
+
+	delete[] arr;
+}
+
+void inputIndexes(int& i1, int& i2, int size)
+{
 	std::cout << "\nEnter indexes for swap:" << std::endl;
 	while (true)
 	{
@@ -36,18 +46,12 @@ void swapElementsInArray(const char* name)
 	while (true)
 	{
 		i2 = getValue<int>("Enter second index : ");
-		if (i2 > -1 && i2 < size && i2!=i1) break;
+		if (i2 > -1 && i2 < size && i2 != i1) break;
 		std::cout << "Size must be non-negative, smaller size and not equal first index. Please try again\n";
 	}
-
-	swap(i1, i2, arr);
-
-	outputArray(arr, size);
-
-	delete[] arr;
-
 }
-template void swapElementsInArray<int>(const char* name);
-template void swapElementsInArray<double>(const char* name);
-template void swapElementsInArray<char>(const char* name);
+
+template void runProgram<int>(const char* name);
+template void runProgram<double>(const char* name);
+template void runProgram<char>(const char* name);
 

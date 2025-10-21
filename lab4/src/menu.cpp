@@ -8,7 +8,7 @@
 void showMenu()
 {
 	std::cout << "\n+======================================================================+" << std::endl;
-	std::cout << "Μενώ" << std::endl;
+	std::cout << "Menu" << std::endl;
 	std::cout << "1.Add a carrier type." << std::endl;
 	std::cout << "2.Information display (price and travel time for a specific city)." << std::endl;
 	std::cout << "3.End of the program." << std::endl;

@@ -3,7 +3,7 @@
 #include "../includes/airplane.h"
 #include "../includes/utils.h"
 
-Airplane::Airplane(double distance) : CargoCarrier(800, 1, distance,inputCityName()) {}
+Airplane::Airplane(double distance) : CargoCarrier(800, 1, distance, inputCityName()) {}
 
 void Airplane::getName()
 {

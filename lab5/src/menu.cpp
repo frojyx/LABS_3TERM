@@ -23,15 +23,15 @@ void menu()
 		opt = getValue<int>("");
 		switch (opt) {
 		case 1:
-			swapElementsInArray<int>("int");
+			runProgram<int>("int");
 			std::cout << "Select an action: ";
 			break;
 		case 2:
-			swapElementsInArray<double>("double");
+			runProgram<double>("double");
 			std::cout << "Select an action: ";
 			break;
 		case 3:
-			swapElementsInArray<char>("char");
+			runProgram<char>("char");
 			std::cout << "Select an action: ";
 			break;
 		case 4:

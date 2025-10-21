@@ -9,12 +9,12 @@ private:
 	double speedKmH;
 	std::string city;
 protected:
-	CargoCarrier(double speed, double cost, double distance,const std::string& cityName);
+	CargoCarrier(double speed, double cost, double distance, const std::string& cityName);
 	CargoCarrier();
 public:
 	virtual ~CargoCarrier();
-	virtual void getName()=0;
-	
+	virtual void getName() = 0;
+
 	CargoCarrier& operator=(const CargoCarrier& other);
 	CargoCarrier(const CargoCarrier& other);
 
