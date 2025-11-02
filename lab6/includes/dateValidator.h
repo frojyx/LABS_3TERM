@@ -1,10 +1,9 @@
 #pragma once 
 
-#include <string>
-using namespace std;
+#include <iostream>
 
 class DateValidator {
 public:
-    static bool isValidFormat(const string& date);
-    static void checkDate(const string& date);
+    static bool isValidFormat(const std::string& date);
+    static void checkDate(const std::string& date);
 };

@@ -1,5 +1,5 @@
 #include "../includes/dateFormatException.h"
 
-DateFormatException::DateFormatException(const string& msg) : message(msg) {}
+DateFormatException::DateFormatException(const std::string& msg) : message(msg) {}
 
-string DateFormatException:: what() const { return message; }
+std::string DateFormatException:: what() const { return message; }

@@ -1,7 +1,8 @@
 #include "../includes/dateValidator.h"
 #include "../includes/dateFormatException.h"
+#include <string>
 
-bool DateValidator::isValidFormat(const string& date) {
+bool DateValidator::isValidFormat(const std::string& date) {
     if (date.size() != 8) return false;
     return isdigit(date[0]) && isdigit(date[1]) &&
         date[2] == '.' &&
@@ -10,7 +11,7 @@ bool DateValidator::isValidFormat(const string& date) {
         isdigit(date[6]) && isdigit(date[7]);
 }
 
-void DateValidator::checkDate(const string& date) {
+void DateValidator::checkDate(const std::string& date) {
     if (!isValidFormat(date)) {
         throw DateFormatException("Ошибка: неверный формат даты! Используйте формат дд.мм.гг");
     }
