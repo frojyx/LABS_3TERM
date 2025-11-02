@@ -26,4 +26,6 @@ void DateValidator::checkDate(const std::string& date) {
         throw DateFormatException("ќшибка: мес€ц должен быть от 01 до 12!");
     if (month == 2 && day > 29)
         throw DateFormatException("ќшибка: в феврале не может быть более 29 дней!");
+    if (year < 1 || year > 99)
+        throw DateFormatException("ќшибка: год должен быть от 01 до 99 !");
 }
