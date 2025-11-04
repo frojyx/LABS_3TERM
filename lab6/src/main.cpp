@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-    setlocale(LC_ALL, "ru");
-    showMenu();
-    return 0;
+	setlocale(LC_ALL, "ru");
+	showMenu();
+	return 0;
 }
