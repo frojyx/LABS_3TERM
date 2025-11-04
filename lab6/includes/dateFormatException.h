@@ -1,10 +1,12 @@
 #pragma once 
 
+#include <exception>
 #include <iostream>
+#include <string>
 
-class DateFormatException {
+class DateFormatException : public std::exception{
 	std::string message;
 public:
 	explicit DateFormatException(const std::string& msg);
-	std::string what() const;
+	const char * what() const noexcept override;
 };

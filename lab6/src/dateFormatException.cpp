@@ -2,4 +2,4 @@
 
 DateFormatException::DateFormatException(const std::string& msg) : message(msg) {}
 
-std::string DateFormatException::what() const { return message; }
+const char * DateFormatException::what() const noexcept{ return message.c_str(); }
