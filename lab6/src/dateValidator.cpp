@@ -28,6 +28,8 @@ void DateValidator::checkDate(const std::string& date) {
     if (year < 0 || year > 99)
         throw DateFormatException("ќшибка: год должен быть от 00 до 99!");
 
+    bool isLeapYear = (year % 4 == 0);
+    int maxDays = isLeapYear ? 29 : 28;
     switch (month) {
     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
         if (day > 31) throw DateFormatException("ќшибка: в этом мес€це не может быть более 31 дн€!");
@@ -37,9 +39,7 @@ void DateValidator::checkDate(const std::string& date) {
         break;
     case 2:
     {
-        bool isLeapYear = (year % 4 == 0);
-
-        if (int maxDays = isLeapYear ? 29 : 28; day > maxDays) {
+        if (day > maxDays) {
             throw DateFormatException("ќшибка: неверное число дней в феврале!");
         }
     }
