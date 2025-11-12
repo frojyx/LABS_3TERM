@@ -38,16 +38,14 @@ void DateValidator::checkDate(const std::string& date) {
     case 2:
     {
         bool isLeapYear = (year % 4 == 0);
-        int maxDays = isLeapYear ? 29 : 28;
 
-        if (day > maxDays) {
+        if (int maxDays = isLeapYear ? 29 : 28; day > maxDays) {
             throw DateFormatException("ќшибка: неверное число дней в феврале!");
         }
-        break;
     }
+    break;
     default:
         throw DateFormatException("ќшибка: некорректный номер мес€ца!");
-        break;
     }
 }
 
