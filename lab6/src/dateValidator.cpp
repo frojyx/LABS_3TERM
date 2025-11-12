@@ -2,6 +2,7 @@
 #include "../includes/dateFormatException.h"
 #include <string>
 
+
 bool DateValidator::isValidFormat(const std::string& date) {
 	if (date.size() != 8) return false;
 	return isdigit(date[0]) && isdigit(date[1]) &&
@@ -24,7 +25,7 @@ void DateValidator::checkDate(const std::string& date) {
         throw DateFormatException("ќшибка: день должен быть от 01 до 31!");
     if (month < 1 || month > 12)
         throw DateFormatException("ќшибка: мес€ц должен быть от 01 до 12!");
-    if (year < 0 || year > 99) 
+    if (year < 0 || year > 99)
         throw DateFormatException("ќшибка: год должен быть от 00 до 99!");
 
     switch (month) {
@@ -40,10 +41,13 @@ void DateValidator::checkDate(const std::string& date) {
         int maxDays = isLeapYear ? 29 : 28;
 
         if (day > maxDays) {
-            throw DateFormatException("ќшибка: в феврале не может быть более " +
-                std::to_string(maxDays) + " дней!");
+            throw DateFormatException("ќшибка: неверное число дней в феврале!");
         }
+        break;
     }
-    break;
+    default:
+        throw DateFormatException("ќшибка: некорректный номер мес€ца!");
+        break;
     }
 }
+
