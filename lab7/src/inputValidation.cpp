@@ -4,29 +4,29 @@
 #include <cctype>
 
 int validInt(int min, int max) {
-    int number;
+	int number;
 
-    while (true) {
-        if (!(std::cin >> number)) {
-            std::cin.clear();
-            while (std::cin.get() != '\n');
-            std::cout << "Enter an integer: ";
-            continue;
-        }
+	while (true) {
+		if (!(std::cin >> number)) {
+			std::cin.clear();
+			while (std::cin.get() != '\n');
+			std::cout << "Enter an integer: ";
+			continue;
+		}
 
-        if (std::cin.get() != '\n') {
-            std::cin.clear();
-            while (std::cin.get() != '\n');
-            std::cout << "Please enter the number without any other characters. : ";
-            continue;
-        }
+		if (std::cin.get() != '\n') {
+			std::cin.clear();
+			while (std::cin.get() != '\n');
+			std::cout << "Please enter the number without any other characters. : ";
+			continue;
+		}
 
-        if (number<min || number>max) {
-            std::cout << "Please enter a number greater than the minimum:" << std::endl;
-            continue;
-        }
-        return number;
-    }
+		if (number<min || number>max) {
+			std::cout << "Please enter a number greater than the minimum:" << std::endl;
+			continue;
+		}
+		return number;
+	}
 }
 
 
