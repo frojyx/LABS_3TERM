@@ -6,7 +6,7 @@
 
 ATS::ATS() : date(""), cityCode(0), cityName(""), duration(""), tariff(0.0), phoneNumber("") {}
 
-ATS::ATS(const std::string& d, int & code, const std::string& name,
+ATS::ATS(const std::string& d, const int& code, const std::string& name,
     const std::string& dur, double tar, const std::string& phone)
     : date(d), cityCode(code), cityName(name), duration(dur), tariff(tar), phoneNumber(phone) {
 }
@@ -17,7 +17,7 @@ ATS::ATS(const std::string& d, int & code, const std::string& name,
 //        << std::setw(8) << obj.tariff << std::setw(15) << obj.phoneNumber;
 //    return out;
 //}
-
+//
 //std::istream& operator>>(std::istream& in, ATS& obj) {
 //    std::cout << "Введите дату разговора (ДД.ММ.ГГ): ";
 //    obj.date = getValidDate();
