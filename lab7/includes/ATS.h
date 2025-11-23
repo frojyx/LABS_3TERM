@@ -4,10 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
-#include "../includes/inputValidation.h"
 #include <iomanip>
-
+#include "../includes/inputValidation.h"
 
 class ATS {
 private:
@@ -25,11 +23,15 @@ public:
 
     friend std::ostream& operator<<(std::ostream& out, const ATS& obj)
     {
-        out << std::setw(12) << obj.date << std::setw(8) << obj.cityCode
-            << std::setw(15) << obj.cityName << std::setw(10) << obj.duration
-            << std::setw(8) << obj.tariff << std::setw(15) << obj.phoneNumber;
-        return out; 
+        out << std::setw(12) << obj.date;
+        out << std::setw(8) << obj.cityCode;
+        out << std::setw(15) << obj.cityName;
+        out << std::setw(10) << obj.duration;
+        out << std::setw(8) << std::fixed << std::setprecision(2) << obj.tariff;
+        out << std::setw(15) << obj.phoneNumber;
+        return out;
     }
+
     friend std::istream& operator>>(std::istream& in, ATS& obj)
     {
         std::cout << "Введите дату разговора (ДД.ММ.ГГ): ";
@@ -53,6 +55,7 @@ public:
     static std::string* getPhonesByTariff(const std::string& filename, double targetTariff, int& count);
 
     std::string getDate() const { return date; }
+    int getCityCode() const { return cityCode; }
     std::string getCityName() const { return cityName; }
     std::string getDuration() const { return duration; }
     double getTariff() const { return tariff; }

@@ -59,6 +59,7 @@ std::string* ATS::getPhonesByTariff(const std::string& filename, double targetTa
         if (!file.fail() && record.tariff == targetTariff) {
             phones[index] = record.phoneNumber;
             index++;
+            if (index >= count) break;
         }
     }
     file.close();

@@ -72,21 +72,31 @@ std::string getValidPhone() {
 std::string getValidPhoneNumber() {
     std::string phone;
     while (true) {
-        std::cout << "Введите номер телефона (+375XXXXXXXXX): ";
+        std::cout << "Введите 12 цифр номера телефона: ";
         phone = getValidString();
 
-        if (phone.length() == 13 &&
-            phone.substr(0, 4) == "+375" &&
-            std::isdigit(phone[4]) && std::isdigit(phone[5]) && std::isdigit(phone[6]) &&
-            std::isdigit(phone[7]) && std::isdigit(phone[8]) && std::isdigit(phone[9]) &&
-            std::isdigit(phone[10]) && std::isdigit(phone[11]) && std::isdigit(phone[12])) {
+        if (phone.length() != 12) {
+            std::cout << "Ошибка! Номер должен содержать ровно 12 цифр." << std::endl;
+            continue;
+        }
+
+        bool allDigits = true;
+        for (char c : phone) {
+            if (!std::isdigit(c)) {
+                allDigits = false;
+                break;
+            }
+        }
+
+        if (allDigits) {
             break;
         }
-        std::cout << "Ошибка! Номер должен начинаться с +375 и содержать 9 цифр после (всего 13 символов)." << std::endl;
+        else {
+            std::cout << "Ошибка! Номер должен содержать только цифры." << std::endl;
+        }
     }
     return phone;
 }
-
 std::string getValidTime() {
     std::string time;
     while (true) {
