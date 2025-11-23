@@ -5,12 +5,6 @@
 #include <fstream>
 #include <iomanip>
 
-void displayHeader() {
-	std::cout << std::setw(12) << "Дата" << std::setw(8) << "Код" << std::setw(15) << "Город"
-		<< std::setw(10) << "Время" << std::setw(8) << "Тариф" << std::setw(15) << "Телефон" << std::endl;
-	std::cout << std::string(70, '-') << std::endl;
-}
-
 void addRecords() {
 	std::ofstream file("ats_data.txt", std::ios::app);
 	if (!file) {
@@ -34,7 +28,6 @@ void displayAllRecords() {
 	}
 
 	std::cout << "\nВсе записи АТС:" << std::endl;
-	displayHeader();
 
 	ATS record;
 	while (!file.eof()) {
