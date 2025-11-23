@@ -53,7 +53,6 @@ public:
     static std::string* getPhonesByTariff(const std::string& filename, double targetTariff, int& count);
 
     std::string getDate() const { return date; }
-   // std::string getCityCode() const { return cityCode; }
     std::string getCityName() const { return cityName; }
     std::string getDuration() const { return duration; }
     double getTariff() const { return tariff; }
