@@ -23,13 +23,18 @@ public:
 
     friend std::ostream& operator<<(std::ostream& out, const ATS& obj)
     {
-        out << std::setw(12) << obj.date;
-        out << std::setw(8) << obj.cityCode;
-        out << std::setw(15) << obj.cityName;
-        out << std::setw(10) << obj.duration;
-        out << std::setw(8) << std::fixed << std::setprecision(2) << obj.tariff;
-        out << std::setw(15) << obj.phoneNumber;
+        obj.printFormatted(out);
         return out;
+    }
+
+    void printFormatted(std::ostream& out) const
+    {
+        out << std::setw(12) << date
+            << std::setw(8) << cityCode
+            << std::setw(15) << cityName
+            << std::setw(10) << duration
+            << std::setw(8) << std::fixed << std::setprecision(2) << tariff
+            << std::setw(15) << phoneNumber;
     }
 
     friend std::istream& operator>>(std::istream& in, ATS& obj)
