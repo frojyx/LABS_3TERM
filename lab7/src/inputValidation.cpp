@@ -3,32 +3,28 @@
 #include <string>
 #include <cctype>
 
-int validInt(int min, int max) {
-	int number;
-
-	while (true) {
-		if (!(std::cin >> number)) {
-			std::cin.clear();
-			while (std::cin.get() != '\n');
-			std::cout << "Enter an integer: ";
-			continue;
-		}
-
-		if (std::cin.get() != '\n') {
-			std::cin.clear();
-			while (std::cin.get() != '\n');
-			std::cout << "Please enter the number without any other characters. : ";
-			continue;
-		}
-
-		if (number<min || number>max) {
-			std::cout << "Please enter a number greater than the minimum:" << std::endl;
-			continue;
-		}
-		return number;
-	}
+int getValidInt() {
+    int value;
+    while (!(std::cin >> value)) {
+        std::cin.clear();
+        std::cin.ignore(10000, '\n');
+        std::cout << "ќшибка! ¬ведите целое число: ";
+    }
+    std::cin.ignore(10000, '\n');
+    return value;
 }
 
+int validInt(int min, int max) {
+    int value;
+    while (true) {
+        value = getValidInt();
+        if (value >= min && value <= max) {
+            break;
+        }
+        std::cout << "ќшибка! ¬ведите число от " << min << " до " << max << ": ";
+    }
+    return value;
+}
 
 double getValidDouble() {
     double value;
@@ -97,6 +93,7 @@ std::string getValidPhoneNumber() {
     }
     return phone;
 }
+
 std::string getValidTime() {
     std::string time;
     while (true) {
