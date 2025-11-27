@@ -44,17 +44,5 @@ void searchByTariff() {
 	std::cout << "Введите тариф для поиска: ";
 	double targetTariff = getValidDouble();
 
-	int count = 0;
-	std::string* phones = ATS::getPhonesByTariff("ats_data.txt", targetTariff, count);
-
-	if (phones == nullptr || count == 0) {
-		std::cout << "Номера телефонов с тарифом " << targetTariff << " не найдены." << std::endl;
-	}
-	else {
-		std::cout << "\nНомера телефонов с тарифом " << targetTariff << ":" << std::endl;
-		for (int i = 0; i < count; i++) {
-			std::cout << phones[i] << std::endl;
-		}
-		delete[] phones;
-	}
+	ATS::displayPhonesByTariff("ats_data.txt", targetTariff);
 }

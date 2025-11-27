@@ -116,18 +116,19 @@ std::string getValidDate() {
     std::string date;
     while (true) {
         date = getValidString();
-        if (date.length() == 8 && date[2] == '.' && date[5] == '.' &&
+        if (date.length() == 10 && date[2] == '.' && date[5] == '.' &&
             std::isdigit(date[0]) && std::isdigit(date[1]) &&
             std::isdigit(date[3]) && std::isdigit(date[4]) &&
-            std::isdigit(date[6]) && std::isdigit(date[7])) {
+            std::isdigit(date[6]) && std::isdigit(date[7]) &&
+            std::isdigit(date[8]) && std::isdigit(date[9])) {
             int day = std::stoi(date.substr(0, 2));
             int month = std::stoi(date.substr(3, 2));
-            int year = std::stoi(date.substr(6, 2));
-            if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 0 && year <= 99) {
+            int year = std::stoi(date.substr(6, 4));
+            if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 0 && year <= 9999) {
                 break;
             }
         }
-        std::cout << "Ошибка! Введите дату в формате ДД.ММ.ГГ: ";
+        std::cout << "Ошибка! Введите дату в формате ДД.ММ.ГГГГ: ";
     }
     return date;
 }

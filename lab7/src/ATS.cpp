@@ -38,30 +38,28 @@ int ATS::getPhonesCountByTariff(const std::string& filename, double targetTariff
     return count;
 }
 
-std::string* ATS::getPhonesByTariff(const std::string& filename, double targetTariff, int& count) {
-    count = getPhonesCountByTariff(filename, targetTariff);
-    if (count == 0) {
-        return nullptr;
-    }
-
-    auto* phones = new std::string[count];
+void ATS::displayPhonesByTariff(const std::string& filename, double targetTariff) {
     std::ifstream file(filename);
     if (!file) {
-        delete[] phones;
-        count = 0;
-        return nullptr;
+        std::cout << "Ошибка открытия файла." << std::endl;
+        return;
     }
 
-    int index = 0;
+    bool found = false;
     ATS record;
+
+    std::cout << "\nНомера телефонов с тарифом " << targetTariff << ":" << std::endl;
+
     while (!file.eof()) {
         readFromFile(file, record);
         if (!file.fail() && record.tariff == targetTariff) {
-            phones[index] = record.phoneNumber;
-            index++;
-            if (index >= count) break;
+            std::cout << record.phoneNumber << std::endl;
+            found = true;
         }
     }
     file.close();
-    return phones;
+
+    if (!found) {
+        std::cout << "Номера телефонов с тарифом " << targetTariff << " не найдены." << std::endl;
+    }
 }

@@ -30,7 +30,7 @@ public:
 
     friend std::istream& operator>>(std::istream& in, ATS& obj)
     {
-        std::cout << "Введите дату разговора (ДД.ММ.ГГ): ";
+        std::cout << "Введите дату разговора (ДД.ММ.ГГГГ): ";
         obj.date = getValidDate();
         std::cout << "Введите код города: ";
         obj.cityCode = validInt(0, 10000000);
@@ -48,7 +48,7 @@ public:
     friend void readFromFile(std::ifstream& in, ATS& obj);
 
     static int getPhonesCountByTariff(const std::string& filename, double targetTariff);
-    static std::string* getPhonesByTariff(const std::string& filename, double targetTariff, int& count);
+    static void displayPhonesByTariff(const std::string& filename, double targetTariff);
 
     std::string getDate() const { return date; }
     int getCityCode() const { return cityCode; }
