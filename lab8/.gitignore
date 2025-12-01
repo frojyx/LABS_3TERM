@@ -1,0 +1,40 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Rider IDE files (если используешь Rider)
+.idea/
+
+# Резервные файлы
+*.bak
+*.log
+
+# Прочие временные файлы
+*.tmp
+*.temp
+*.cache
+
+# Windows Thumbs.db
+Thumbs.db
+
+# Исключить конкретные файлы из индекса
+.gitattributes
+lab8.vcxproj
+lab8.vcxproj.filters
+lab8.sln
