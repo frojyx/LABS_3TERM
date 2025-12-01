@@ -7,7 +7,7 @@
 template <typename T>
 class Program {
     Array<T> arr;
-    Algorithm<T> algorithm;
+    Algorithm<T> algorithm [[no_unique_address]];
 
     void createArray();
     void addArrayElement();

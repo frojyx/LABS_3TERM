@@ -52,9 +52,8 @@ public:
         friend bool operator>=(const Iterator& lhs, const Iterator& rhs) {
             return (lhs.ptr >= rhs.ptr);
         }
-        friend bool operator==(const Iterator& lhs, const Iterator& rhs) {
-            return (lhs.ptr == rhs.ptr);
-        }
+        friend bool operator==(const Iterator& lhs, const Iterator& rhs) = default;
+
         friend bool operator!=(const Iterator& lhs, const Iterator& rhs) {
             return (lhs.ptr != rhs.ptr);
         }
