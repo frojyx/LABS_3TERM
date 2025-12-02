@@ -5,7 +5,7 @@
 template <typename T>
 class Array {
     T* data = nullptr;
-    size_t dim = 0;
+    size_t dimension = 0;
     size_t cap = 1;
 
 public:
@@ -65,23 +65,23 @@ public:
     T operator[](size_t index) const { return data[index]; }
 
     friend bool operator<(const Array& lhs, const Array& rhs) {
-        return (lhs.dim < rhs.dim);
+        return (lhs.dimension < rhs.dimension);
     }
     friend bool operator<=(const Array& lhs, const Array& rhs) {
-        return (lhs.dim <= rhs.dim);
+        return (lhs.dimension <= rhs.dimension);
     }
     friend bool operator>(const Array& lhs, const Array& rhs) {
-        return (lhs.dim > rhs.dim);
+        return (lhs.dimension > rhs.dimension);
     }
     friend bool operator>=(const Array& lhs, const Array& rhs) {
-        return (lhs.dim >= rhs.dim);
+        return (lhs.dimension >= rhs.dimension);
     }
     friend bool operator==(const Array& lhs, const Array& rhs) {
-        if (lhs.dim != rhs.dim) {
+        if (lhs.dimension != rhs.dimension) {
             return false;
         }
 
-        for (size_t i = 0; i < lhs.dim; i++) {
+        for (size_t i = 0; i < lhs.dimension; i++) {
             if (lhs.data[i] != rhs.data[i]) {
                 return false;
             }
@@ -112,25 +112,25 @@ public:
 };
 
 template <typename T>
-Array<T>::Array(const size_t inputSize) : dim(inputSize) {
-    if (dim != 0) {
-        cap = 2 * dim;
+Array<T>::Array(const size_t inputSize) : dimension(inputSize) {
+    if (dimension != 0) {
+        cap = 2 * dimension;
         data = new T[cap];
     }
 }
 
 template <typename T>
-Array<T>::Array(const Array& other) : dim(other.dim), cap(other.cap) {
+Array<T>::Array(const Array& other) : dimension(other.dimension), cap(other.cap) {
     data = new T[cap];
 
-    for (size_t i = 0; i < dim; i++) {
+    for (size_t i = 0; i < dimension; i++) {
         data[i] = other.data[i];
     }
 }
 
 template <typename T>
 Array<T>::Array(Array&& move) noexcept
-    : data(move.data), dim(move.dim), cap(move.cap) {
+    : data(move.data), dimension(move.dimension), cap(move.cap) {
     move.data = nullptr;
 }
 
@@ -146,13 +146,13 @@ Array<T>& Array<T>::operator=(const Array& other) {
         return *this;
     }
 
-    dim = other.dim;
+    dimension = other.dimension;
     cap = other.cap;
 
     delete[] data;
     data = new T[cap];
 
-    for (int i = 0; i < dim; i++) {
+    for (int i = 0; i < dimension; i++) {
         data[i] = other.data[i];
     }
 
@@ -165,7 +165,7 @@ Array<T>& Array<T>::operator=(Array&& move) noexcept {
         return *this;
     }
 
-    dim = move.dim;
+    dimension = move.dimension;
     cap = move.cap;
     data = move.data;
 
@@ -179,7 +179,7 @@ void Array<T>::reserve(size_t newCap) {
     if (newCap <= cap) return;
 
     auto* newData = new T[newCap];
-    for (size_t i = 0; i < dim; ++i) {
+    for (size_t i = 0; i < dimension; ++i) {
         newData[i] = data[i];
     }
 
@@ -190,12 +190,12 @@ void Array<T>::reserve(size_t newCap) {
 
 template <typename T>
 bool Array<T>::empty() const {
-    return dim == 0;
+    return dimension == 0;
 }
 
 template <typename T>
 size_t Array<T>::size() const {
-    return dim;
+    return dimension;
 }
 
 template <typename T>
@@ -272,23 +272,23 @@ typename Array<T>::Iterator Array<T>::begin() const {
 
 template <typename T>
 typename Array<T>::Iterator Array<T>::end() const {
-    return Array::Iterator(data + dim);
+    return Array::Iterator(data + dimension);
 }
 
 template <typename T>
 typename Array<T>::Iterator Array<T>::insert(Iterator pos, const T& value) {
     size_t ind = pos - begin();
 
-    if (dim == cap) {
+    if (dimension == cap) {
         reserve(cap * 2);
     }
 
-    for (size_t i = dim; i > ind; i--) {
+    for (size_t i = dimension; i > ind; i--) {
         data[i] = data[i - 1];
     }
 
     data[ind] = value;
-    dim++;
+    dimension++;
 
     return Iterator(data + ind);
 }
@@ -297,18 +297,18 @@ template <typename T>
 typename Array<T>::Iterator Array<T>::erase(Iterator pos) {
     size_t ind = pos - begin();
 
-    for (size_t i = ind; i < dim - 1; i++) {
+    for (size_t i = ind; i < dimension - 1; i++) {
         data[i] = data[i + 1];
     }
 
-    dim--;
+    dimension--;
 
     return Iterator(data + ind);
 }
 
 template <typename T>
 void Array<T>::clear() {
-    dim = 0;
+    dimension = 0;
 }
 
 template <typename T>
@@ -324,33 +324,33 @@ T& Array<T>::back() {
     if (empty()) {
         throw std::out_of_range("Array is empty");
     }
-    return data[dim - 1];
+    return data[dimension - 1];
 }
 
 template <typename T>
 void Array<T>::push_back(const T& value) {
-    if (dim >= cap) {
+    if (dimension >= cap) {
         reserve(cap * 2);
     }
 
-    data[dim] = value;
+    data[dimension] = value;
 
-    dim++;
+    dimension++;
 }
 
 template <typename T>
 void Array<T>::push_front(const T& value) {
-    if (dim >= cap) {
+    if (dimension >= cap) {
         reserve(cap * 2);
     }
 
-    for (size_t i = dim; i > 0; i--) {
+    for (size_t i = dimension; i > 0; i--) {
         data[i] = data[i - 1];
     }
 
     data[0] = value;
 
-    dim++;
+    dimension++;
 }
 
 template <typename T>
@@ -358,7 +358,7 @@ void Array<T>::pop_back() {
     if (empty()) {
         return;
     }
-    dim--;
+    dimension--;
 }
 
 template <typename T>
@@ -367,9 +367,9 @@ void Array<T>::pop_front() {
         return;
     }
 
-    for (size_t i = 0; i < dim - 1; i++) {
+    for (size_t i = 0; i < dimension - 1; i++) {
         data[i] = data[i + 1];
     }
 
-    dim--;
+    dimension--;
 }

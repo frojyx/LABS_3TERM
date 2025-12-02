@@ -5,7 +5,7 @@
 void showTask() {
     std::cout << "\t\t\t\tTASK" << std::endl;
     std::cout << "Implement classes Container and Iterator for a "
-        "one-dimensional array."
+        "one-dimensionensional array."
         << std::endl;
     std::cout << "Implement a class Algorithm that defines methods for:"
         << std::endl;
