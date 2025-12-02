@@ -1,4 +1,4 @@
-# Visual Studio
+п»ї# Visual Studio
 .vs/
 *.user
 *.suo
@@ -18,14 +18,14 @@ obj/
 *.snupkg
 packages/
 
-# Rider IDE files (если используешь Rider)
+# Rider IDE files (ГҐГ±Г«ГЁ ГЁГ±ГЇГ®Г«ГјГ§ГіГҐГёГј Rider)
 .idea/
 
-# Резервные файлы
+# ГђГҐГ§ГҐГ°ГўГ­Г»ГҐ ГґГ Г©Г«Г»
 *.bak
 *.log
 
-# Прочие временные файлы
+# ГЏГ°Г®Г·ГЁГҐ ГўГ°ГҐГ¬ГҐГ­Г­Г»ГҐ ГґГ Г©Г«Г»
 *.tmp
 *.temp
 *.cache
@@ -33,7 +33,7 @@ packages/
 # Windows Thumbs.db
 Thumbs.db
 
-# Исключить конкретные файлы из индекса
+# Г€Г±ГЄГ«ГѕГ·ГЁГІГј ГЄГ®Г­ГЄГ°ГҐГІГ­Г»ГҐ ГґГ Г©Г«Г» ГЁГ§ ГЁГ­Г¤ГҐГЄГ±Г 
 .gitattributes
 lab8.vcxproj
 lab8.vcxproj.filters
