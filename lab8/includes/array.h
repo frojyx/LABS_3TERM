@@ -95,7 +95,7 @@ public:
 
     void reserve(size_t newCap);
     bool empty() const;
-    size_t Size() const;
+    size_t getSize() const;
     size_t capacity() const;
     void swap(Array& other) noexcept;
     Iterator begin() const;
@@ -105,10 +105,10 @@ public:
     void clear();
     T& front();
     T& back();
-    void push_back(const T& value);
-    void push_front(const T& value);
-    void pop_back();
-    void pop_front();
+    void pushBack(const T& value);
+    void pushFront(const T& value);
+    void popBack();
+    void popFront();
 };
 
 template <typename T>
@@ -194,7 +194,7 @@ bool Array<T>::empty() const {
 }
 
 template <typename T>
-size_t Array<T>::Size() const {
+size_t Array<T>::getSize() const {
     return size;
 }
 
@@ -328,7 +328,7 @@ T& Array<T>::back() {
 }
 
 template <typename T>
-void Array<T>::push_back(const T& value) {
+void Array<T>::pushBack(const T& value) {
     if (size >= cap) {
         reserve(cap * 2);
     }
@@ -339,7 +339,7 @@ void Array<T>::push_back(const T& value) {
 }
 
 template <typename T>
-void Array<T>::push_front(const T& value) {
+void Array<T>::pushFront(const T& value) {
     if (size >= cap) {
         reserve(cap * 2);
     }
@@ -354,7 +354,7 @@ void Array<T>::push_front(const T& value) {
 }
 
 template <typename T>
-void Array<T>::pop_back() {
+void Array<T>::popBack() {
     if (empty()) {
         return;
     }
@@ -362,7 +362,7 @@ void Array<T>::pop_back() {
 }
 
 template <typename T>
-void Array<T>::pop_front() {
+void Array<T>::popFront() {
     if (empty()) {
         return;
     }

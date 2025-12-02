@@ -38,14 +38,14 @@ void showMenu() {
 
 void showAddMenu() {
     std::cout << "\n\t\t\t\tADD MENU" << std::endl;
-    std::cout << "1. Add to the beginning (push_front)." << std::endl;
-    std::cout << "2. Add to the end (push_back)." << std::endl;
+    std::cout << "1. Add to the beginning (pushFront)." << std::endl;
+    std::cout << "2. Add to the end (pushBack)." << std::endl;
     std::cout << "3. Insert at index." << std::endl;
 }
 
 void showRemoveMenu() {
     std::cout << "\n\t\t\t\tREMOVE MENU" << std::endl;
-    std::cout << "1. Remove from the beginning (pop_front)." << std::endl;
-    std::cout << "2. Remove from the end (pop_back)." << std::endl;
+    std::cout << "1. Remove from the beginning (popFront)." << std::endl;
+    std::cout << "2. Remove from the end (popBack)." << std::endl;
     std::cout << "3. Remove at index." << std::endl;
 }

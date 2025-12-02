@@ -71,7 +71,7 @@ void Program<T>::addArrayElement() {
 
         switch (opt) {
         case 1:
-            arr.push_front(value);
+            arr.pushFront(value);
 
             std::cout << kGreenColor
                 << "\nYou successfully added an element to the "
@@ -79,7 +79,7 @@ void Program<T>::addArrayElement() {
                 << kWhiteColor << std::endl;
             return;
         case 2:
-            arr.push_back(value);
+            arr.pushBack(value);
 
             std::cout << kGreenColor
                 << "\nYou successfully added an element to the end "
@@ -121,7 +121,7 @@ void Program<T>::removeArrayElement() {
 
         switch (opt) {
         case 1:
-            arr.pop_front();
+            arr.popFront();
 
             std::cout << kGreenColor
                 << "\nYou successfully removed the first element of "
@@ -129,7 +129,7 @@ void Program<T>::removeArrayElement() {
                 << kWhiteColor << std::endl;
             return;
         case 2:
-            arr.pop_back();
+            arr.popBack();
 
             std::cout << kGreenColor
                 << "\nYou successfully removed the last element of "

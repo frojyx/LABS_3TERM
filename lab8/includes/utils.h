@@ -32,7 +32,7 @@ size_t getValidIndex(const Array<T>& arr) {
     while (true) {
         std::cout << "\nPlease enter the index at which to add the value: ";
 
-        if (auto index = getValue<size_t>(); index <= arr.Size()) {
+        if (auto index = getValue<size_t>(); index <= arr.getSize()) {
             return index;
         }
 
