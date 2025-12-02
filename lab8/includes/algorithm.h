@@ -11,7 +11,7 @@ public:
 
 template <typename T>
 void Algorithm<T>::sort(Array<T>& arr) const {
-    size_t size = arr.size();
+    size_t size = arr.Size();
 
     for (size_t i = 1; i < size; i++) {
         T keyValue = arr[i];
@@ -32,7 +32,7 @@ bool Algorithm<T>::find(const Array<T>& arr, const T& value) const {
     }
 
     size_t left = 0;
-    size_t right = arr.size() - 1;
+    size_t right = arr.Size() - 1;
 
     while (left <= right) {
         size_t mid = (right + left) / 2;
